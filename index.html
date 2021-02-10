@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Aesthete Ceramic Arts</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Aesthete Ceramic Arts offers handmade, affordable kitchenware, sculptures, and jewelry.">
+	<meta name="keywords" content="pottery, kitchenware, shop">
+	<meta name="author" content="Elizabeth Gollahon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="final.css">
+</head>
+
+<body>
+	<div id="wrapper">
+	<header>
+		<div id="header-flex">
+		<a href="index.html"><h1>Aesthete Ceramic Arts</h1></a>
+		<h2>Quality Pottery at Affordable Prices</h2>
+		</div>
+		<a href="index.html"><img src="clay.jpg" id="header-pic" alt="heart shaped clay" height="50" width="50"></a>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="shop.html">Shop</a>
+				<ul>
+					<li><a href="kitchenware.html">Kitchenware</a></li>
+					<li><a href="sculptures.html">Sculptures</a></li>
+					<li><a href="jewelry.html">Jewelry</a></li>
+				</ul>
+			</li>
+			<li><a href="classes.html">Classes</a></li>
+			<li><a href="gallery.html">Gallery</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="teal.jpg" style="width:100%; object-position:50% 65%;" alt="green and blue pots" height="100">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="set.jpg" style="width:100%; object-position:50% 50%;" alt="tiny bowl set" height="100">
+			</div>
+
+			<div class="mySlides fade">
+		    	<img src="rodent.jpg" style="width:100%; object-position:50% 60%;" alt="rodent statuette" height="100">
+		  	</div>
+
+		  	<div class="mySlides fade">
+				<img src="white.jpg" style="width:100%; object-position:50% 30%;" alt="white teapot pieces" height="100">
+			</div>
+		</div>
+		<br>
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+		  <span class="dot" onclick="currentSlide(4)"></span>
+		</div>
+
+		<div id="card-container">
+			<a class="card" href="kitchenware.html">
+				<h2>Kitchenware</h2>
+				<img src="tea.jpg" style="object-position:95% 30%;" alt="teapot with flowers" height="250" width="250">
+			</a>
+			<div class="spacer"></div>
+			<a class="card" href="sculptures.html">
+				<h2>Sculptures</h2>
+				<img src="cherub.jpg" alt="small cherub sculpture" height="250" width="250">
+			</a>
+			<div class="spacer"></div>
+			<a class="card" href="jewelry.html">
+				<h2>Jewelry</h2>
+				<img src="dish.jpg" alt="jewelry in dish" height="250" width="250">
+			</a>
+		</div>
+	</main>
+
+	<footer>
+			Copyright &copy; 2020 Aesthete Ceramic Arts
+	</footer>
+	</div>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function currentSlide(n) {
+		  pickSlides(slideIndex = n);
+		}
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";  
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}    
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";  
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 5000); // Change image every 2 seconds
+		}
+
+		function pickSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1}
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none";
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		}
+	</script>
+</body>
+
+</html>

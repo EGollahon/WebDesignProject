@@ -1,0 +1,435 @@
+z/*
+	#3e5622 = dark green
+	#709255 = light green
+	#4c3b4d = dark purple
+	#e8e1ef = lavender
+	#111111 = black
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #3e5622;
+	color: #111111;
+	font-family: "Times New Roman", serif;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	background-color: #4c3b4d;
+	padding: 10px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+header h2 {
+	color: #e8e1ef;
+}
+
+header a:link {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #e8e1ef;
+}
+
+header a:visited {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #e8e1ef;
+}
+
+header a:hover {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #e8e1ef;
+}
+
+nav {
+	color: #111111;
+	font-size: 150%;
+	text-align: center;
+	padding: 10px 0px 15px 0px;
+	position: relative;
+	background-color: #709255;
+	margin-top: 15px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	text-align: center;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 45px;
+}
+
+nav li {
+	border-bottom: 1px solid #111111;
+	margin: 0px 60px 0px 60px;
+}
+
+nav ul ul {
+	position: absolute;
+	background-color: #e8e1ef;
+	text-align: left;
+	display: none;
+	border-radius: 30px;
+	border: 1px solid #111111;
+	padding: 15px 20px 15px 20px;
+	box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5), 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+nav ul ul li {
+	display: block;
+	margin: 8px;
+}
+
+nav li:hover ul {
+	display: block;
+}
+
+nav a:link {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #111111;
+}
+
+nav a:visited {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #111111;
+}
+
+nav a:hover {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #111111;
+	text-shadow: 2px 2px 1px #e8e1ef;
+}
+
+nav ul ul a:hover {
+	font-family: Ubuntu;
+	text-decoration: none;
+	color: #111111;
+	text-shadow: 2px 2px 2px #709255;
+}
+
+main {
+	overflow: auto;
+	padding: 20px 50px 50px 50px;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+footer {
+	font-style: italic;
+	font-size: 10pt;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+h2 {
+	color: #4c3b4d;
+}
+
+h3, h4 {
+	color: #3e5622;
+}
+
+a:link {
+	color: #3e5622;
+	font-family: Ubuntu;
+}
+
+a:visited {
+	font-family: Ubuntu;
+	color: #4c3b4d;
+}
+
+a:hover {
+	font-family: Ubuntu;
+	color: #709255;
+}
+
+img {
+	border-radius: 40px;
+	object-fit: cover;
+}
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	width: 80%;
+	margin-top: 20px;
+}
+
+input, textarea {
+	margin-bottom: 0.5em;
+}
+
+p {
+	text-align: left;
+}
+
+.shop {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.shop-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	margin-top: 30px;
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+}
+
+.banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-decoration: none;
+}
+
+.spacer {
+	height: 30px;
+	width: 0px;
+}
+
+.vertical-spacer {
+	height: 30px;
+	width: 0px;
+}
+
+.slideshow-container {
+  display: none;
+}
+
+#card-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#wrapper {
+	background-color: #e8e1ef;
+	padding-top: 15px;
+}
+
+#gallery-grid {
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	display: grid;
+	grid-gap: 30px;
+}
+
+#header-pic {
+	display: none;
+}
+
+#header-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 600px) {
+	nav ul {
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	nav li {
+		border-bottom: none;
+		margin: 0px;
+	}
+
+	img {
+		height: 200px;
+		width: 200px;
+	}
+
+	form {
+		width: 60%;
+		display: grid;
+		grid-gap: 1em;
+		grid-template-rows: auto;
+		grid-template-columns: 6em 1fr;
+		margin-top: 30px;
+	}
+
+	.shop-card {
+		flex-direction: row;
+		align-items: flex-start;
+		width: 80%;
+		text-align: left;
+	}
+
+	.shop-card-text {
+		margin-left: 20px;
+	}
+
+	.spacer {
+		height: 0px;
+		width: 50px;
+	}
+
+	.slideshow-container {
+	  width: 100%;
+	  display: block;
+	}
+
+	.mySlides {
+	  display: none;
+	}
+
+	.dot {
+	  cursor: pointer;
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active, .dot:hover {
+	  background-color: #717171;
+	}
+
+	.fade {
+	  -webkit-animation-name: fade;
+	  -webkit-animation-duration: 1.5s;
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	#card-container {
+		flex-direction: row;
+	}
+
+	#gallery-grid {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	#header-pic {
+		display: block;
+		height: 150px;
+		width: 150px;
+		object-fit: cover;
+		object-position: 80% 50%;
+		margin-left: 20px;
+		border-radius: 75px;
+	}
+
+	@-webkit-keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}
+	}
+
+	@keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}
+	}
+}
+
+@media (min-width: 1024px) {
+	header {
+		height: 150px;
+	}
+
+	nav {
+		float: left;
+		width: 260px;
+		margin-left: 20px;
+		border-radius: 40px;
+		padding: 40px 0px 175px 0px;
+	}
+
+	nav ul {
+		flex-direction: column;
+		line-height: 45px;
+		text-align: left;
+	}
+
+	nav li {
+		border-bottom: 1px solid #111111;
+		margin: 0px 30px 0px 30px;
+		padding-left: 10px;
+		margin-top: 15px;
+	}
+
+	main {
+		margin-right: 20px;
+		margin-left: 290px;
+	}
+
+	footer {
+		margin-right: 20px;
+		margin-left: 290px;
+	}
+
+	img {
+		height: 250px;
+		width: 250px;
+	}
+
+	form {
+		margin: 50px 0px 50px 0px;
+	}
+
+	.shop {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	.shop-card {
+		width: 45%;
+	}
+
+	#wrapper {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 40px;
+		overflow: hidden;
+	}
+
+	#gallery-grid {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: auto;
+	}
+
+	#header-pic {
+		margin-left: 35px;
+	}
+}
